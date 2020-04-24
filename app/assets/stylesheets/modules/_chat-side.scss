@@ -14,10 +14,11 @@ $side-text-color: #ffffff;
   &__box {
     height: 20px;
     width: 260px;
+    color: $side-text-color;
     display: flex;
+    justify-content: space-between;
     &__user-name {
       width: 200px;
-      color: $side-text-color;
       font-size: 15px;
       font-weight: bold;
       line-height: 20px;
