@@ -1,24 +1,21 @@
 .chat-side
   .side-header
     .side-header__box
-      %p.side-header__box__username
+      .side-header__box__username
         = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         %li.side-header__box__menu__edit-account
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .groups
-    = link_to "#", class:"aaa" do
+    - current_user.groups.each do |group|
       .group
-        %p.group__group-name
-          techcamp
-        %p.group__latest-message
-          まだメッセージがありません。
-    = link_to "#", class: "group" do
-      %p.group__group-name
-        テスト
-      %p.group__latest-message
-        まだメッセージがありません。
+        = link_to '#' do
+          .group__group-name
+            = group.name
+          .group__latest-message
+            メッセージはまだありません。
+
