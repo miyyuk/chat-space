@@ -2,7 +2,7 @@ $(function () {
 
   function buildHTML(message) {
     if (message.image) {
-      let html =
+      var html =
         `<div class="message">
           <div class="message-info">
             <div class="message-info__talker">
@@ -20,7 +20,7 @@ $(function () {
           </div>
         </div>`
     } else {
-      let html =
+      var html =
         `<div class="message">
           <div class="message-info">
             <div class="message-info__talker">
@@ -42,8 +42,8 @@ $(function () {
 
   $('#new_message').on('submit', function (e) {
     e.preventDefault()
-    let formData = new FormData(this);
-    let url = $(this).attr('action')
+    var formData = new FormData(this);
+    var url = $(this).attr('action')
     $.ajax({
       url: url,
       type: "POST",
@@ -53,7 +53,7 @@ $(function () {
       contentType: false
     })
       .done(function (data) {
-        let html = buildHTML(data);
+        var html = buildHTML(data);
         $('.messages').append(html);
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight });
         $('form')[0].reset();
