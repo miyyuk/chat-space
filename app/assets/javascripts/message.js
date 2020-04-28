@@ -4,34 +4,34 @@ $(function () {
     if (message.image) {
       var html =
         `<div class="message">
-          <div class="message__message-info">
-            <div class="message__message-info__talker">
+          <div class="message-info">
+            <div class="message-info__talker">
               ${ message.user_name}
             </div>
-            <div class="message__message-info__date">
+            <div class="message-info__date">
               ${message.created_at}
             </div>
           </div>
-          <div class="message__message-box">
-            <p class="message__message-box__content">
+          <div class="message-box">
+            <p class="message-box__content">
               ${message.content}
             </p>
-            <img src=" ${message.image} " class="message__message-box__image" >
+            <img src=" ${message.image} " class="message-box__image" >
           </div>
         </div>`
     } else {
       var html =
         `<div class="message">
-          <div class="message__message-info">
-            <div class="message__message-info__talker">
+          <div class="message-info">
+            <div class="message-info__talker">
               ${ message.user_name}
             </div>
-            <div class="message__message-info__date">
+            <div class="message-info__date">
               ${message.created_at}
             </div>
           </div>
-          <div class="message__message-box">
-            <p class="message__message-box__content">
+          <div class="message-box">
+            <p class="message-box__content">
               ${message.content}
             </p>
           </div>
