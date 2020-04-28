@@ -1,14 +1,14 @@
 .chat-main
   .main-header
-    .main-header__group-box
-      %p.main-header__group-box__current-group
+    .group-box
+      %p.group-box__current-group
         = @group.name
-      %ul.main-header__group-box__member-list
+      %ul.group-box__member-list
         Member :
         - @group.users.each do |user|
-          %li.main-header__group-box__member-list__member
+          %li.group-box__member-list__member
             = user.name
-    = link_to edit_group_path(@group), class: "main-header__edit-btn" do
+    = link_to edit_group_path(@group), class: "edit-btn" do
       Edit
   .messages
     = render @messages
